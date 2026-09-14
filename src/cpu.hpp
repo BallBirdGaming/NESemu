@@ -25,6 +25,18 @@ constexpr uint8_t bit5 = 1 << 5;
 constexpr uint8_t bit6 = 1 << 6;
 constexpr uint8_t bit7 = 1 << 7;
 
+constexpr uint8_t NOP_instructions_delay = 1;
+constexpr uint8_t transfer_instructions_delay = 1;
+constexpr uint8_t clear_or_set_instruction_delay = 1;
+
+constexpr uint8_t opcode_NOP = 0xea;
+
+constexpr uint8_t opcode_CLC = 0x18;
+constexpr uint8_t opcode_SEC = 0x38;
+
+constexpr uint8_t opcode_CLD = 0xd8;
+constexpr uint8_t opcode_SED = 0xf8;
+
 class CPU{
 private:
 

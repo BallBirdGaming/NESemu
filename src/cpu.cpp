@@ -51,11 +51,33 @@ void CPU::CPU_clock(){
 
 void CPU::interpret_instruction(uint8_t instruction){
     switch (instruction){
-        case(0xea): // NOP instruction
-            cycle_remaining = 1;
+        case(opcode_NOP): // NOP instruction
+            cycle_remaining = NOP_instructions_delay;
             NOP();
             break;
+
+
+        case(opcode_CLC):
+            cycle_remaining = clear_or_set_instruction_delay;
+            CLC();
+            break;
+
+        case(opcode_SEC):
+            cycle_remaining = clear_or_set_instruction_delay;
+            SEC();
+            break;
+
+        case(opcode_CLD):
+            cycle_remaining = clear_or_set_instruction_delay;
+            CLD();
+            break;
+
+        case(opcode_SED):
+            cycle_remaining = clear_or_set_instruction_delay;
+            SED();
+            break;
     
+
         default:
             std::cout << "Illegal instruction can not execute. instruction: " << static_cast<int>(instruction) << std::endl;
             break;
