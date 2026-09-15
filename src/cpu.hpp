@@ -37,6 +37,14 @@ constexpr uint8_t opcode_SEC = 0x38;
 constexpr uint8_t opcode_CLD = 0xd8;
 constexpr uint8_t opcode_SED = 0xf8;
 
+constexpr uint8_t opcode_TAX = 0xaa;
+constexpr uint8_t opcode_TAY = 0xa8;
+constexpr uint8_t opcode_TSX = 0xba;
+constexpr uint8_t opcode_TXA = 0x8a;
+constexpr uint8_t opcode_TXS = 0x9a;
+constexpr uint8_t opcode_TYA = 0x98;
+
+
 class CPU{
 private:
 

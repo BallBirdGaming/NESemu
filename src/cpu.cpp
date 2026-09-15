@@ -76,6 +76,36 @@ void CPU::interpret_instruction(uint8_t instruction){
             cycle_remaining = clear_or_set_instruction_delay;
             SED();
             break;
+
+        case(opcode_TAX):
+            cycle_remaining = transfer_instructions_delay;
+            TAX();
+            break;
+
+        case(opcode_TAY):
+            cycle_remaining = transfer_instructions_delay;
+            TAY();
+            break;
+
+        case(opcode_TSX):
+            cycle_remaining = transfer_instructions_delay;
+            TSX();
+            break;
+
+        case(opcode_TXA):
+            cycle_remaining = transfer_instructions_delay;
+            TXA();
+            break;
+
+        case(opcode_TXS):
+            cycle_remaining = transfer_instructions_delay;
+            TXS();
+            break;
+
+        case(opcode_TYA):
+            cycle_remaining = transfer_instructions_delay;
+            TYA();
+            break;
     
 
         default:
