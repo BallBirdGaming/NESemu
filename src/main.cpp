@@ -13,13 +13,6 @@ int main(){
     bus.hard_reset();
     bus.fill_NOP();
 
-    bus.write(0xfffc, 0x00);
-    bus.write(0xfffd, 0x80);
-
-    bus.write(0x0000, 0x00);
-
-    bus.write(0x8000, 0xff);
-
     if(bus.load_chartridge("your game here")){
         std::cout << "Cartridge loaded." << std::endl;
     }
