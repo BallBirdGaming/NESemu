@@ -13,8 +13,10 @@ int main(){
     bus.hard_reset();
     bus.fill_NOP();
 
-    if(bus.load_chartridge("your game here")){
+    if(bus.load_cartridge("../testrom/smb.nes")){
         std::cout << "Cartridge loaded." << std::endl;
+    }else{
+        std::cout << "FUCK." << std::endl;
     }
 
     cpu.hard_reset();

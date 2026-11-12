@@ -21,7 +21,7 @@ public:
     uint8_t read(uint16_t address);
     void write(uint16_t address, uint8_t value);
 
-    bool load_chartridge(const std::string &file);
+    bool load_cartridge(const std::string &file);
 
     /*
         Test functions

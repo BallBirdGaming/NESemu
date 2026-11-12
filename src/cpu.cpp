@@ -47,6 +47,7 @@ void CPU::CPU_clock(){
 
     This function interprets bytes as instructions for the cpu to carry out it will adjust the pc and cycle_remaining acordingly
 
+    ( yes i know this looks very ugly )
 */
 
 void CPU::interpret_instruction(uint8_t instruction){
@@ -242,8 +243,8 @@ void CPU::TSX(){    // sets X to stack pointer
     if(X == 0) status_register |= status_register_zero;    
 }
 
-void CPU::TXA(){    // sets X to accumulator
-    X = accumulator;
+void CPU::TXA(){    // sets accumulator to X 
+    accumulator = X;
 
     // set negative flag
     status_register = (status_register & ~status_register_negative) | (X & status_register_negative);

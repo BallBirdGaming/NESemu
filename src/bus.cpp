@@ -46,7 +46,7 @@ void BUS::write(uint16_t address, uint8_t value){
     memory[address] = value;
 }
 
-bool BUS::load_chartridge(const std::string &_file){
+bool BUS::load_cartridge(const std::string &_file){
     if(!std::filesystem::exists(_file)) return false;
 
     std::ifstream file(_file);
@@ -69,7 +69,7 @@ bool BUS::load_chartridge(const std::string &_file){
                 also i have to implement chrrom but ill get there when im done with cpu
         */
 
-        for(int i = 0; i < 10; i++){    // posistion ourselfs to the begin of prgrom
+        for(int i = 0; i < 10; i++){    // position ourselfs to the begin of prgrom
             file.get();
         }
         
